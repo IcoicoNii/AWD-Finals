@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Tektur:wght@400..900&display=swap');
 
 * {
     transition: 1s ease-in-out;
@@ -260,7 +261,9 @@ nav {
     background-color: #2e61ac;
     justify-content: center;
     align-items: end;
-    padding: 70px 0;
+    padding: 10px 0;
+    background-image: url("../img/itemboxesbg.jpeg");
+    background-repeat: no-repeat;
 
     .itemContainer {
         display: flex;
@@ -283,10 +286,13 @@ nav {
     }
 
     .card{
-        background-color: none;
+        background-color: #ffe165;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 20px;
+        overflow: hidden;
+        filter: drop-shadow(0px 0px 1px black);
     }
 
     .card img{
@@ -296,6 +302,12 @@ nav {
         /* border-radius: 25px; */
         padding: 0;
         margin: 0;
+
+        -khtml-user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     .img-container{
@@ -304,12 +316,12 @@ nav {
     }
 
     .swiper-navBtn {
-        color: #6E93f7;
+        color: #8a8a8a;
         transition: color 0.3s ease;
     }
 
     .swiper-navBtn:hover {
-        color: #4070F4;
+        color: #0a0a0a;
     }
 
     .swiper-navBtn::before,
@@ -326,12 +338,39 @@ nav {
     }
 
     .swiper-pagination-bullet {
-        background-color: #6E93f7;
+        background-color: #010614;
         opacity: 1;
     }
 
     .swiper-pagination-bullet-active {
-        background-color: #4070F4;
+        background-color: #14151a;
+    }
+
+    .boton{
+        height: 0px;
+    }
+    
+    .priceButton{
+        position: relative;
+        top: -63px;
+        right: -55px;
+        width: 120px;
+        transform: skew(-39deg);
+        border-radius: 5px;
+        padding: 4px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid #d0b33d;
+    }
+
+    p{
+        margin:0;
+        padding: 0;
+        transform: skew(39deg);
+        font-weight: 700;
+        font-family: "Tektur", sans-serif;
+
     }
 }
 
