@@ -81,7 +81,7 @@ nav {
 }
 
 #staticPart {
-    height: 80dvh;
+    height: 700px;
 }
 
 /* FOOTER  */
@@ -186,8 +186,11 @@ nav {
     height: 750px;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+
     background-image: url("../../pages/page1/assets/img/mainbg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -199,16 +202,52 @@ nav {
         background-color: #2e61ac;
         width: 55%;
         min-width: 300px;
-        display: flex;
+        /* display: flex; */
         /* justify-content: center; */
         /* align-items: center; */
     }
 
+    .featuredLabelOutside {
+        display: none;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        width: 100%;
+        height: 10px;
+
+        /* padding: 0; */
+        /* margin: 0; */
+        /* border: solid; */
+        /* height: 20%; */
+        img {
+            /* margin: 0 auto; */
+            /* display: flex; */
+            width: 300px;
+            /* position: relative; */
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .featuredLabel {
+        position: relative;
+        z-index: 1;
+        /* border: solid; */
+        left: 55px;
+        top: -395px;
+
+        img {
+            width: 200px;
+        }
+    }
+
     #charmander {
         position: relative;
-        bottom: -170px;
+        bottom: -60px;
         width: 200px;
-        right: 120px;
+        right: 100px;
         z-index: 1;
 
     }
@@ -217,8 +256,8 @@ nav {
         position: relative;
         width: 300px;
         z-index: 1;
-        bottom: -80px;
-        left: -20px;
+        bottom: 150px;
+        left: -30px;
     }
 
     .featuredCarouselContainer {
@@ -247,7 +286,9 @@ nav {
 
     .left,
     .right {
+        /* border: solid; */
         width: 20px;
+        height: 10px;
     }
 
 
@@ -267,15 +308,15 @@ nav {
     overflow: hidden;
     flex-direction: column;
 
-    .itemBoxesLabel{
+    .itemBoxesLabel {
         position: relative;
         top: 40px;
         z-index: 2;
         /* left: -110px; */
-        
+
     }
 
-    .itemBoxesLabel img{
+    .itemBoxesLabel img {
         width: 220px;
         filter: drop-shadow(2px 2px 0px rgb(83, 83, 83));
     }
@@ -391,17 +432,26 @@ nav {
     }
 }
 
-#pokecoinsSection{
+#pokecoinsSection {
     height: auto;
     display: flex;
     justify-content: center;
     align-items: end;
     padding: 40px 30px;
     padding-top: 250px;
-    
-    .cards-container{
+    flex-wrap: wrap;
+
+    .pokecoinsLabel img {
+        width: 300px;
+        /* flex-grow: 1; */
+        margin: 20px 30px;
+        margin-bottom: 40px;
+        display: none;
+    }
+
+    .cards-container {
         /* border: solid; */
-        min-width: 400px;
+        min-width: 300px;
         width: 1200px;
         height: 70%;
         display: flex;
@@ -410,8 +460,8 @@ nav {
         flex-wrap: wrap;
         gap: 30px;
     }
-    
-    .card{
+
+    .card {
         border-radius: 20px;
         height: 375px;
         width: 300px;
@@ -420,8 +470,8 @@ nav {
         overflow: hidden;
         filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.158));
     }
-    
-    .card-content{
+
+    .card-content {
         /* border: solid; */
         display: flex;
         flex-direction: column;
@@ -430,12 +480,12 @@ nav {
         gap: 10px;
     }
 
-    .card-desc{
+    .card-desc {
         /* border: solid; */
         height: 40%;
         margin: 0 20px;
-        
-        h1{
+
+        h1 {
             font-size: 1.3rem;
             font-weight: bold;
             padding: 0;
@@ -443,19 +493,19 @@ nav {
             font-family: "Montserrat", sans-serif;
             color: #515954;
         }
-        
-        h2{
+
+        h2 {
             font-size: 0.9rem;
             padding: 0;
             margin: 0;
             font-family: "Montserrat", sans-serif;
         }
     }
-    
-    .card-img{
+
+    .card-img {
         /* border: solid; */
         height: 170px;
-        border-radius: 15px;
+        border-radius: 0px;
         background-image: url("../img/cardimgbg.png");
         background-size: cover;
         background-position: center;
@@ -463,14 +513,14 @@ nav {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        
-        .coins{
+
+        .coins {
             /* border: solid; */
             height: 130px;
             z-index: 1;
         }
 
-        .coins-glare{
+        .coins-glare {
             /* border: solid; */
             position: fixed;
             /* right: -20%; */
@@ -482,31 +532,40 @@ nav {
             transform: scale(1.5);
         }
     }
-    
-    .card-button{
+
+    .card-button {
         /* border: solid; */
         border-radius: 40px;
         width: 130px;
         padding: 10px;
         margin: 0 25px;
-        background-image: linear-gradient(to right, #f8ee00,#ff8a00);
+        background-image: linear-gradient(to right, #f8ee00, #ff8a00);
         margin-bottom: 20px;
         font-family: "Tektur", sans-serif;
         font-weight: 700;
         color: white;
         text-align: center;
     }
-    .card-button:hover{
-        background-image: linear-gradient(to right, #d3cc00,#ce6e00);
+
+    .card-button:hover {
+        background-image: linear-gradient(to right, #d3cc00, #ce6e00);
         cursor: pointer;
     }
 
 }
 
 @keyframes coinglare {
-   0%{opacity: 100%;} 
-   50%{opacity: 50%;} 
-   100%{opacity: 100%;} 
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 
@@ -548,8 +607,30 @@ nav {
         display: none;
     }
 
+
+
+
     #featuredCarousel {
         padding-top: 0px;
+        /* align-items: center; */
+        height: 100dvh;
+
+        /* overflow: hidden; */
+        .featuredLabel {
+            display: none;
+        }
+
+        .featuredLabelOutside {
+            display: inline;
+
+        }
+
+
+
+    }
+
+    #pokecoinsSection {
+        padding: 40px 30px;
     }
 
     nav .container .logo {
@@ -567,9 +648,19 @@ nav {
     #itemBoxes {
         justify-content: center;
         align-items: center;
+        height: 100dvh;
+
+        
 
         .itemContainer {
-            width: 900px;
+            width: 800px;
+        }
+
+        .itemBoxesLabel{
+            padding: 40px;
+            img{
+                width: 300px;
+            }
         }
 
         .priceButton {
@@ -583,13 +674,20 @@ nav {
             font-size: 0.7rem;
         }
 
+    }
 
+    #pokecoinsSection {
+        .pokecoinsLabel img {
+            display: block;
+            width: 90dvw;
+            margin: 20px 0px;
 
-
+        }
     }
 
 
 }
+
 
 
 
@@ -616,6 +714,11 @@ nav {
             transform: skew(-39deg);
         }
 
+        .itemBoxesLabel{
+            position: sticky;
+            padding: 0px;
+        }
+
         p {
             font-size: 0.7rem;
         }
@@ -629,7 +732,13 @@ nav {
 
 @media (max-width: 500px) {
 
+    #featuredCarousel{
+        height: 700px;
+    }
+
+
     #itemBoxes {
+        height: 700px;
         .itemContainer {
             width: 350px;
         }
