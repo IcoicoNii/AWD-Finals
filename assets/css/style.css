@@ -86,7 +86,7 @@ nav {
 
 /* FOOTER  */
 .footer {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     background: linear-gradient(to right, #4e808d, #3a5f68);
     color: #fff;
     font-size: 14px;
@@ -223,7 +223,7 @@ nav {
         img {
             /* margin: 0 auto; */
             /* display: flex; */
-            width: 300px;
+            width: 350px;
             /* position: relative; */
             position: relative;
             left: 50%;
@@ -304,7 +304,7 @@ nav {
     align-items: center;
     padding: 10px 0;
     background-image: url("../img/itemboxesbg.jpeg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     overflow: hidden;
     flex-direction: column;
 
@@ -317,8 +317,7 @@ nav {
     }
 
     .itemBoxesLabel img {
-        width: 220px;
-        filter: drop-shadow(2px 2px 0px rgb(83, 83, 83));
+        width: 260px;
     }
 
     .itemContainer {
@@ -441,6 +440,9 @@ nav {
     padding-top: 250px;
     flex-wrap: wrap;
 
+    background-image: url("../img/itemboxesbg.jpeg");
+    /* background-repeat: no-repeat; */
+
     .pokecoinsLabel img {
         width: 300px;
         /* flex-grow: 1; */
@@ -557,7 +559,7 @@ nav {
 /* Daily Bundles */
 
 #dailybundlesSection {
-    border: solid;
+    /* border: solid; */
     height: auto;
     display: flex;
     justify-content: center;
@@ -567,7 +569,11 @@ nav {
     flex-wrap: wrap;
     transition: 1s;
 
-    .dailybundleslabel {
+    background-image: url("../img/itemboxesbg.jpeg");
+    /* background-repeat: no-repeat; */
+
+    padding-bottom: 200px;
+    .dailybundleslabel img {
         width: 300px;
         /* flex-grow: 1; */
         margin: 20px 30px;
@@ -621,7 +627,7 @@ nav {
         color: #ffffff;
     }
 
-    .text-box{
+    .text-box {
         height: auto;
         display: flex;
         flex-direction: column;
@@ -631,21 +637,27 @@ nav {
 
     .card-button {
         /* border: solid; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
         border-radius: 40px;
         width: 130px;
-        padding: 10px;
+        padding: 5px;
         margin: 0 15px;
         background-image: linear-gradient(to right, #ffffff2f, #d1d1d1);
         margin-bottom: 20px;
+
         font-family: "Tektur", sans-serif;
         font-weight: 700;
         color: white;
         text-align: center;
-
+        user-select: none;
     }
 
     .card-button:hover {
-        background-image: linear-gradient(to right, #929292, #d1d1d1);
+        background-image: linear-gradient(to right, #929292, #6e6e6e);
         cursor: pointer;
     }
 
@@ -663,22 +675,21 @@ nav {
         justify-content: center;
         align-items: center;
 
-        
+
 
         .items {
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             img {
                 /* border: solid; */
-                width: 40%;
+                /* width: 40%; */
                 animation-name: dbItems;
                 animation-duration: 3s;
                 animation-iteration-count: infinite;
-                animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+                animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
                 transform-origin: center;
-                rotate: 10deg;
 
             }
 
@@ -690,7 +701,7 @@ nav {
             align-items: center;
 
             img {
-                width: 70%;
+                width: 175px;
 
             }
         }
@@ -704,12 +715,12 @@ nav {
         /* rotate: 10deg; */
     }
 
-    50%{
+    50% {
         transform: translateY(0px);
         /* rotate: -20deg; */
     }
 
-    100%{
+    100% {
         transform: translateY(10px);
         /* rotate: 10deg; */
     }
@@ -822,7 +833,7 @@ nav {
             padding: 40px;
 
             img {
-                width: 300px;
+                width: 400px;
             }
         }
 
@@ -842,9 +853,19 @@ nav {
     #pokecoinsSection {
         .pokecoinsLabel img {
             display: block;
-            width: 90dvw;
+            width: 60dvw;
             margin: 20px 0px;
+        }
+    }
 
+    #dailybundlesSection {
+
+        padding: 40px 30px;
+
+        .dailybundleslabel img {
+            display: block;
+            width: 60dvw;
+            margin: 20px 0px;
         }
     }
 
@@ -864,8 +885,6 @@ nav {
     }
 
     #itemBoxes {
-
-
         .itemContainer {
             width: 600px;
         }
@@ -880,12 +899,17 @@ nav {
         .itemBoxesLabel {
             position: sticky;
             padding: 0px;
+
+            img {
+                width: 350px;
+            }
         }
 
         p {
             font-size: 0.7rem;
         }
 
+        
 
 
 
@@ -912,6 +936,23 @@ nav {
             right: -50px;
             width: 100px;
             transform: skew(-39deg);
+        }
+    }
+
+    #pokecoinsSection {
+        .pokecoinsLabel img {
+            width: 350px;
+            margin: 0px 0px 50px 0px;
+        }
+    }
+
+    #dailybundlesSection {
+
+        padding-bottom: 120px;
+        
+        .dailybundleslabel img {
+            width: 325px;
+            margin: 20px 0px;
         }
     }
 }
