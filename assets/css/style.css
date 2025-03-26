@@ -554,6 +554,168 @@ nav {
 
 }
 
+/* Daily Bundles */
+
+#dailybundlesSection {
+    border: solid;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 40px 30px;
+    padding-top: 250px;
+    flex-wrap: wrap;
+    transition: 1s;
+
+    .dailybundleslabel {
+        width: 300px;
+        /* flex-grow: 1; */
+        margin: 20px 30px;
+        margin-bottom: 40px;
+        display: none;
+    }
+
+    .cards-container {
+        /* border: solid; */
+        min-width: 300px;
+        width: 1200px;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .card {
+        border-radius: 20px;
+        height: 400px;
+        width: 275px;
+        /* padding: 15px; */
+        /* border: solid rgb(114, 114, 114) 0.5px; */
+        background-image: url("../img/dailybundlesboxes/dbcardbg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.158));
+    }
+
+    .card-content {
+        /* border: solid; */
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        padding-left: 15px;
+        font-family: "Tektur", sans-serif;
+        color: #ffffff;
+    }
+
+    .text-box{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        /* justify-content: space-around; */
+    }
+
+    .card-button {
+        /* border: solid; */
+        border-radius: 40px;
+        width: 130px;
+        padding: 10px;
+        margin: 0 15px;
+        background-image: linear-gradient(to right, #ffffff2f, #d1d1d1);
+        margin-bottom: 20px;
+        font-family: "Tektur", sans-serif;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+
+    }
+
+    .card-button:hover {
+        background-image: linear-gradient(to right, #929292, #d1d1d1);
+        cursor: pointer;
+    }
+
+    .db-content {
+        width: 100%;
+        height: 250px;
+        border-radius: 15px;
+        background-image: url('../img/db-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        
+
+        .items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+                /* border: solid; */
+                width: 40%;
+                animation-name: dbItems;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+                transform-origin: center;
+                rotate: 10deg;
+
+            }
+
+        }
+
+        .bundle-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 70%;
+
+            }
+        }
+    }
+
+}
+
+@keyframes dbItems {
+    0% {
+        transform: translateY(10px);
+        /* rotate: 10deg; */
+    }
+
+    50%{
+        transform: translateY(0px);
+        /* rotate: -20deg; */
+    }
+
+    100%{
+        transform: translateY(10px);
+        /* rotate: 10deg; */
+    }
+}
+
+
 @keyframes coinglare {
     0% {
         opacity: 100%;
@@ -650,15 +812,16 @@ nav {
         align-items: center;
         height: 100dvh;
 
-        
+
 
         .itemContainer {
             width: 800px;
         }
 
-        .itemBoxesLabel{
+        .itemBoxesLabel {
             padding: 40px;
-            img{
+
+            img {
                 width: 300px;
             }
         }
@@ -714,7 +877,7 @@ nav {
             transform: skew(-39deg);
         }
 
-        .itemBoxesLabel{
+        .itemBoxesLabel {
             position: sticky;
             padding: 0px;
         }
@@ -732,13 +895,14 @@ nav {
 
 @media (max-width: 500px) {
 
-    #featuredCarousel{
+    #featuredCarousel {
         height: 700px;
     }
 
 
     #itemBoxes {
         height: 700px;
+
         .itemContainer {
             width: 350px;
         }
